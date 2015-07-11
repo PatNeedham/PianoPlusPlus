@@ -1,0 +1,21 @@
+<div class="login">
+  <div class="container">
+    <div class="form">
+
+    <h1>Sign up</h1>
+
+    <%= form_for(@user) do |f| %>
+      <%= f.text_field :first_name, :placeholder => "First name" %> <br>
+      <%= f.text_field :last_name, :placeholder => "Last name" %> <br>
+      <%= f.text_field :username, :placeholder => "Username" %> <br>
+      <%= f.email_field :email, :placeholder => "Email" %> <br>
+      <%= f.password_field :password, :placeholder => "Password" %> <br>
+      I'm a <%= f.check_box :istutor %>Tutor <%= f.check_box :isstudent %>Student <br> 
+      <%= f.text_area :description, :placeholder => "description" %> <br>
+      <%= f.submit "Create an account", class: "btn-submit" %> <br>
+    <% end %>
+
+  
+    </div>
+  </div>
+</div>
