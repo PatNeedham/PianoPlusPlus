@@ -322,3 +322,73 @@ body {
     width: 15px;
     height: 15px;
     cursor: pointer; }
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 3rem;
+    font-family: Arial, sans-serif;
+    background: #222;
+}
+
+select {
+    font-size: 3rem;
+}
+
+p {
+    background: #fff;
+    border-radius: 0.7rem;
+    padding: 1rem 1.5rem;
+}
+
+#keyboard {
+    width: 100%;
+    overflow: hidden;
+}
+
+.key {
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 0.3rem;
+    margin: 0 0.1%;
+    width: 2%;
+    padding: 3.5rem 0;
+    text-align: center;
+    float: left;
+    text-transform: uppercase;
+    transition: margin 150ms ease-in-out;
+    font-weight: bold;
+}
+
+.black {
+    border: 1px solid #ccc;
+    background: #000000;
+    border-radius: 0.3rem;
+    margin: 0 0.1%;
+    width: 2%;
+    padding: 1.5rem 0;
+    text-align: center;
+    float: left;
+    text-transform: uppercase;
+    transition: margin 150ms ease-in-out;
+    font-weight: bold;
+}
+
+.key span {
+    font-size: 1.8rem;
+    display: inline-block;
+    padding: 1rem;
+    margin-top: 1rem;
+    background: #ccc;
+    border-radius: 0.4rem;
+}
+
+.playing {
+    background: #ddd;
+    margin-top: 2rem;
+}
