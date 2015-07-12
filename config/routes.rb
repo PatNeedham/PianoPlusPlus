@@ -16,10 +16,12 @@ Rails.application.routes.draw do
 
   get '/login' => 'sessions#new'
   post 'login' => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
   resources :sessions
 
   get 'help' => 'static_pages#help'
   get 'about' => 'static_pages#about'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
