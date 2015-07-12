@@ -3,6 +3,115 @@
 <head>
   <title>Piano++ Chatroom<%= rid %></title>
   <% include _header %>
+<style>
+  @import "compass/css3";
+
+@import url(http://fonts.googleapis.com/css?family=Pirata+One);
+
+$ebony : #171C1A;
+$ivory: white;
+* {box-sizing: border-box;}
+
+body {
+  @include background(linear-gradient( top, white, gainsboro 100%));
+  background-size: cover;
+}  
+audio { display: block; margin-bottom: 1rem; } 
+h1,h2  { 
+
+  color: rgb(100,100,100);
+  line-height: 1.2; 
+  margin: 0 0 1rem; 
+  text-shadow : 0 2px 4px rgba(black, 0.25);
+   b {
+   color: rgb(100,0,0);
+    text-shadow: 0px 1px 5px #CCC;
+  }
+}
+h1 { 
+    font-family: 'Pirata One', cursive;
+
+  font-size: 3rem;
+}
+.page {
+  margin: 30px auto;
+  text-align: center;
+  width: 75%;
+  overflow: hidden;
+}
+ol { 
+  position: relative; 
+  padding: 0; 
+  margin: 0 0 10px; 
+  display: inline-block;
+  //float: left;
+  font-size: 0; // to get rid of spaces between keys. ugly, I know.
+}
+li{
+  font-size: 16px;
+  font-size: 1rem;
+  @include background(linear-gradient( top, #C0C1BD, #F0F0F0 10%, linen));  
+  transition: all 0.1s ease-in-out; //  just a little animation
+
+  padding: 0; 
+  margin: 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 220px 15px 50px;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 5px 5px #aaa;
+
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+
+  color: transparent;
+  &:hover {
+    color: #C0C1BD;
+    
+  }
+  &:active{
+    box-shadow: none;
+    top: 5px;
+    color: #333;
+  }
+  &.ebony {
+    /* build the key shape */
+    z-index: 2;
+    position: absolute;
+    width: 32px;
+    top: 0px;
+    margin-left: -16px; // align the ebony keys
+    padding: 130px 0px 10px;
+
+    /* Typography */
+    text-align: center;
+    font-size: 0.66667rem;
+    color: transparent;
+   
+    
+    border-radius: 0 0 2px 2px;
+    border-width: 0 6px 12px;
+    border-color: #000;
+    border-bottom-color: #424546;
+    background: $ebony;
+    @include background( linear-gradient(#5F6265, #151B19 25%, $ebony));
+    box-shadow: 0 3px 5px #ccc, inset 0px 0px 0px 1px rgba(gainsboro,0.2);
+    
+    &:hover {
+        color: gainsboro;
+    }
+    
+    &:active {
+      @include background( linear-gradient(#5F6265, #151B19 50%, $ebony)); 
+      border-bottom-width: 8px;
+      padding-top: 135px;
+      color: $ivory;
+    }
+  }
+}
+  
+</style>
 </head>
 <body>
 
@@ -15,16 +124,91 @@
   </div>
     
     
-    <div id="keyboard"></div>
    
-   
-    
+<div class="page">
+<ol class="scale-1">
+  <li data-note="c" >C</li>
+  <li data-note="cs" class="ebony">C# D♭</li>
+  <li data-note="d">D</li>
+  <li data-note="ds" class="ebony">D# E♭</li>
+  <li data-note="e">E</li>
+  <li data-note="f">F</li>
+  <li data-note="fs" class="ebony">F# G♭</li>
+  <li data-note="g">G</li>
+  <li data-note="gs" class="ebony">G# A♭</li>
+  <li data-note="a">A</li>
+  <li data-note="as" class="ebony">A# B♭</li>
+  <li data-note="b">B</li>
+</ol> 
   
-    <p id="time_left"></p>
-<ul>
-  <li id="playpause">▶</li>
-  <li id="reset">↺</li>
-</ul>
+<ol class="scale-2">
+  <li data-note="c">C</li>
+  <li data-note="cs" class="ebony">C# D♭</li>
+  <li data-note="d">D</li>
+  <li data-note="ds" class="ebony">D# E♭</li>
+  <li data-note="e">E</li>
+  <li data-note="f">F</li>
+  <li data-note="fs" class="ebony">F# G♭</li>
+  <li data-note="g">G</li>
+  <li data-note="gs" class="ebony">G# A♭</li>
+  <li data-note="a">A</li>
+  <li data-note="as" class="ebony">A# B♭</li>
+  <li data-note="b">B</li>
+</ol>
+<!-- ol class="scale-3">
+  <li data-note="c">C</li>
+  <li data-note="cs" class="ebony">C# D♭</li>
+  <li data-note="d">D</li>
+  <li data-note="ds" class="ebony">D# E♭</li>
+  <li data-note="e">E</li>
+  <li data-note="f">F</li>
+  <li data-note="fs" class="ebony">F# G♭</li>
+  <li data-note="g">G</li>
+  <li data-note="gs" class="ebony">G# A♭</li>
+  <li data-note="a">A</li>
+  <li data-note="as" class="ebony">A# B</li>
+  <li data-note="b">B</li>
+</ol -->
+</div>
+
+<!-- Original mp3 files from http://www.vibrationdata.com/piano.htm -->
+
+C <audio id="mid-c" preload="auto" controls>
+  <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_middle_C.mp3"></source>
+</audio>
+C# <audio preload="auto" id="mid-c-sharp" controls>
+  <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_C_sharp.mp3"></source>
+</audio>
+D <audio preload="auto" id="mid-d" controls>
+  <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_D.mp3"></source>
+</audio>
+D# <audio preload="auto" id="mid-d-sharp" controls>
+  <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_D_sharp.mp3"></source>
+</audio>
+E <audio preload="auto" id="mid-e" controls>
+  <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_E.mp3"></source>
+</audio>
+F <audio preload="auto" id="mid-f" controls>
+  <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_F.mp3"></source>
+</audio>
+F# <audio preload="auto" id="mid-f-sharp" controls>
+  <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_F_sharp.mp3"></source>
+</audio>
+G <audio preload="auto" id="mid-g" controls>
+  <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_G.mp3"></source>
+</audio>
+G#<audio preload="auto" id="mid-g-sharp" controls>
+  <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_G_sharp.mp3"></source>
+</audio>
+A <audio preload="auto" id="mid-a" controls>
+  <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_A.mp3"></source>
+</audio>
+A# <audio preload="auto" id="mid-a-sharp" controls>
+  <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_A_sharp.mp3"></source>
+</audio>
+B <audio preload="auto" id="mid-b" controls>
+  <source src="https://dl.dropbox.com/u/37434025/PianoTones/piano_B.mp3"></source>
+</audio>
         
 
   <div id="controlsContainer">
