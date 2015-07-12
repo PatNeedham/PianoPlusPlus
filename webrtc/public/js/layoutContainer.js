@@ -77,15 +77,15 @@
                 
                 if ((rows/cols) * vidRatio > availableRatio) {
                     // Our widgets are taking up the whole height
-                    tHeight = Math.floor( Height/rows );
-                    tWidth = Math.floor( tHeight/vidRatio );
+                    tHeight = Math.floor( (Height/1.2)/rows );
+                    tWidth = Math.floor( (tHeight/1.2)/vidRatio );
                 } else {
                     // Our widgets are taking up the whole width
-                    tWidth = Math.floor( Width/cols );
-                    tHeight = Math.floor( tWidth*vidRatio );
+                    tWidth = Math.floor( (Width/1.2)/cols );
+                    tHeight = Math.floor( (tWidth/1.2)*vidRatio );
                 }
                 
-                var area = (tWidth*tHeight) * count;
+                var area = ((tWidth/2)*tHeight) * count;
                 
                 // If this width and height takes up the most space then we're going with that
                 if (maxArea == undefined || (area > maxArea)) {

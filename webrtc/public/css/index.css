@@ -240,11 +240,11 @@ html, body {
 body {
   background: #7fbfd6 no-repeat center center fixed;
   /* Old browsers */
-  background-image: radial-gradient(circle at 50% 50%, #7fbfd6, #000066);
-  background-image: -webkit-radial-gradient(50% 50%, circle, #7fbfd6, #000066);
-  background-image: -moz-radial-gradient(50% 50%, circle, #7fbfd6, #000066);
-  background-image: -ms-radial-gradient(50% 50%, circle, #7fbfd6, #000066);
-  background-image: -o-radial-gradient(50% 50%, circle, #7fbfd6, #000066);
+  background-image: radial-gradient(circle at 50% 50%, #7fbfd6, #5598b0);
+  background-image: -webkit-radial-gradient(50% 50%, circle, #7fbfd6, #5598b0);
+  background-image: -moz-radial-gradient(50% 50%, circle, #7fbfd6, #5598b0);
+  background-image: -ms-radial-gradient(50% 50%, circle, #7fbfd6, #5598b0);
+  background-image: -o-radial-gradient(50% 50%, circle, #7fbfd6, #5598b0);
   min-height: 100%; }
 
 .container {

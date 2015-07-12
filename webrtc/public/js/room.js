@@ -26,12 +26,33 @@ Room.prototype = {
       $('.container').on('transitioned webkitTransitionEnd', function(e){
         self.layout();
       });
+    
       self.unseenCount = 0;
       $("#chatButton").addClass("no-after");
     });
     $('#chatInput').keyup(function(e){
       if(e.keyCode == 27){$('#chatButton').trigger('click');}
     });
+      
+//START OF ALL OF THE ADDED
+          
+          $("#chatButton").click(function(){
+      $(".container").toggleClass("chatEnabled");
+      $("#chattr").toggleClass("chatEnabled");
+      $('#chatInput').focus();
+      $('.container').on('transitioned webkitTransitionEnd', function(e){
+        self.layout();
+      });
+    
+      self.unseenCount = 0;
+      $("#chatButton").addClass("no-after");
+    });
+    $('#chatInput').keyup(function(e){
+      if(e.keyCode == 27){$('#chatButton').trigger('click');}
+    });
+      
+//END OF ALL OF THE ADDED
+      
     $("#recordButton").click(function(){
       $(this).toggleClass("selected");
       var actionVerb, nextAction;

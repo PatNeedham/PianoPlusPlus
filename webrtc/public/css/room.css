@@ -78,8 +78,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 #controlsContainer {
   position: absolute;
-  bottom: 0px;
+  bottom: 15px;
   right: 400px;
+height: 50px;
   left: 0px;
   width: 100%; }
   #controlsContainer .controlsHeader {
@@ -322,6 +323,3 @@ body {
     width: 15px;
     height: 15px;
     cursor: pointer; }
-* {
-    box-sizing: border-box;
-}

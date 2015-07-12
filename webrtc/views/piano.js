@@ -1,8 +1,3 @@
-/*
-
-Is you use this in a project, drop me a line. I'd love to see it used in action!
-
-*/
 $(document).ready(function(){
   var c = $("#mid-c")[0];
   var cs = $("#mid-c-sharp")[0];
