@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Piano++</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <style>
+        /*
+Author: Daniel Henriquez
+Twitter: @dhenriquez
+website: http://www.dhenriquez.cl
+*/
+
+body {
+   
+}
+
+.login {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    background: #83d3c9;
+   
+    margin: 50px auto;
+    box-shadow: 0px 0px 20px rgba(0,0,0,.8);
+}
+
+.login .titulo {
+    width: 305px;
+    height: 50px;
+    padding-top: 8px;
+    padding-bottom: 1px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background: #349e92;
+    border: #349e92 solid 1px;
+    margin-bottom: 30px;
+    
+    font-family: Arial;
+}
+
+.login form {
+    width: 240px;
+    height: auto;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login form input[type=text], .login form input[type=password] {
+    width: 400px;
+    font-size: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    border: none;
+    color: #bfbfbf;
+    background: #141414;
+    outline: none;
+    margin: 0;
+}
+
+.login form input[type=text] {
+    
+    border-top: #0b0b0b solid 0px;
+    background: #fff url(http://dev.dhenriquez.com/test-img/icons/111-user.png) 10px center no-repeat;
+}
+
+.login form input[type=password] {
+  
+    border-top: #83d3c9 5px solid;
+    border-bottom: #353535 0px solid;
+    background: #fff url(http://dev.dhenriquez.com/test-img/icons/54-lock.png) 10px center no-repeat;
+}
+
+.login form .enviar {
+    width: 240px;
+    height: 45px;
+    display: block;
+    padding-top: 7px;
+    padding-bottom: 14px;
+    
+    border: none;
+    border-top: # 1px solid;
+    
+    background: #349e92;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFF;
+    
+    font-family: Arial;
+}
+
+.login .olvido {
+    width: 240px;
+    height: auto;
+    overflow: hidden;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    padding-left: -15px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.login .olvido .col {
+    width: 50%;
+    height: auto;
+    float: left;
+}
+
+.login .olvido .col a {
+    color: #fff;
+    text-decoration: none;
+    font: 12px Arial;
+}
+
+
+        </style>
+	</head>
+	<body class="index">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" >
+					<h1 id="logo"><a href="index.html">Piano++ <span>with Angelhack</span></a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+                            <li class="current"><a href="index.html">Help</a></li>
+							<!--<li class="submenu">
+								<a href="#">About</a>
+								<ul>
+									<li><a href="left-sidebar.html">Mentors</a></li>
+									<li><a href="right-sidebar.html">Students</a></li>
+									<li><a href="no-sidebar.html">Lobby</a></li>
+                                    <li><a href="no-sidebar.html">Our Team</a></li>
+									<li><a href="contact.html">Contact</a></li>
+									
+								</ul>
+							</li>-->
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Log In</a></li>
+							<li><a href="#" class="button special">Sign Up</a></li>
+						</ul>
+					</nav>
+				</header>
+<br><br>
+
+			<section class="login">
+	<div class="titulo">Login</div>
+	<form action="#" method="post" enctype="application/x-www-form-urlencoded">
+    	<input type="text" required title="Username required" placeholder="Username" data-icon="U">
+        <input type="password" required title="Password required" placeholder="Password" data-icon="x">
+        <div class="olvido">
+        	<div class="col"><a href="#" title="Ver Carásteres">Register</a></div>
+            <div class="col"><a href="#" title="Recuperar Password">Forgot Password?</a></div>
+        </div>
+        <a href="#" class="enviar">Submit</a>
+    </form>
+</section>
+					
+
+			<!-- Footer -->
+				<footer id="footer">
+
+					<ul class="icons">
+						<li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
+						<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
+					
+					</ul>
+
+					<ul class="copyright">
+						<li>&copy; Piano++</li><li>Made with ♥ at <a href="http://angelhack.com/hackathon/manhattan-2015/">Angelhack</a></li>
+					</ul>
+
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
