@@ -1,5 +1,7 @@
 == README
 
+{<img src="https://badges.greenkeeper.io/PatNeedham/PianoPlusPlus.svg" alt="Greenkeeper badge">}[https://greenkeeper.io/]
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
